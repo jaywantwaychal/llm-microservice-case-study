@@ -1,0 +1,21 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: microservices-llm-security
+  ai:
+    mistralai:
+      api-key: AISqzeq5phWOL9C6a54N0GTMjKoTtfUM
+      chat:
+        enabled: true
+        options:
+          model: mistral-small
+          temperature: 0.7
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+

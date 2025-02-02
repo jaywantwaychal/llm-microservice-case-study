@@ -1,0 +1,21 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: applicationGateway
+  cloud:
+    gateway:
+      routes:
+        - id: microservices-llm-security
+          uri: lb://MICROSERVICES-LLM-SECURITY
+          predicates:
+            - Path=/llm/ai/**
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
