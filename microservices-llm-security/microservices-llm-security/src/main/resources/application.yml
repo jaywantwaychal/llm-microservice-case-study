@@ -6,7 +6,7 @@ spring:
     name: microservices-llm-security
   ai:
     mistralai:
-      api-key: AISqzeq5phWOL9C6a54N0GTMjKoTtfUM
+      api-key: ${MISTRAL_API_KEY}
       chat:
         enabled: true
         options:
